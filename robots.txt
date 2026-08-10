@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://litkhai.github.io/sitemap.xml
