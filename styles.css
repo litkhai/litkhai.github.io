@@ -332,8 +332,15 @@ h1 {
   --card-accent: #bbb6fd;
 }
 
-.card-llmops {
+.card-llmops,
+.card-plain {
   --card-accent: #ffffff;
+}
+
+.card-more {
+  --card-accent: #8f8d86;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0.12);
 }
 
 .card h3 {
