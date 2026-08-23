@@ -337,12 +337,6 @@ h1 {
   --card-accent: #ffffff;
 }
 
-.card-more {
-  --card-accent: #8f8d86;
-  border-top-width: 1px;
-  border-top-color: rgba(255, 255, 255, 0.12);
-}
-
 .card h3 {
   margin-bottom: 0.4rem;
   color: var(--card-accent);
