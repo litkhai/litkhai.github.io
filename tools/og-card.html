@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      html, body { width: 1200px; height: 630px; }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 72px 80px;
+        background: #f7f5ef;
+        color: #171717;
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-synthesis: none;
+      }
+      .top { display: flex; align-items: center; gap: 18px; }
+      .mark {
+        width: 26px; height: 26px; border-radius: 50%;
+        background: #ffcc01; box-shadow: 0 0 0 7px #171717;
+      }
+      .eyebrow {
+        font-size: 25px; font-weight: 800;
+        letter-spacing: 0.16em; color: #8a6900;
+      }
+      h1 {
+        font-size: 148px; font-weight: 800;
+        letter-spacing: -0.055em; line-height: 0.92;
+      }
+      .role { margin-top: 22px; font-size: 41px; font-weight: 650; letter-spacing: -0.02em; }
+      .lede { margin-top: 16px; font-size: 31px; color: #686761; letter-spacing: -0.01em; }
+      .bottom { display: flex; align-items: flex-end; justify-content: space-between; }
+      .chips { display: flex; gap: 12px; }
+      .chip {
+        padding: 11px 20px; font-size: 24px; font-weight: 750;
+        border: 2px solid #171717; border-radius: 999px;
+      }
+      .chip-ch { background: #ffcc01; }
+      .chip-rp { background: #bbb6fd; }
+      .url { font-size: 27px; font-weight: 800; letter-spacing: -0.01em; }
+      .rule { height: 6px; background: #171717; margin: 34px 0; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="top">
+        <span class="mark"></span>
+        <span class="eyebrow">SOLUTIONS ARCHITECT · CLICKHOUSE · SEOUL</span>
+      </div>
+      <div class="rule"></div>
+      <h1>Ken Lee</h1>
+      <p class="role">Building the AI stack end to end.</p>
+      <p class="lede">Hands-on labs, verified by running them. Runs clickhouse.kr.</p>
+    </div>
+    <div class="bottom">
+      <div class="chips">
+        <span class="chip chip-ch">ClickHouse</span>
+        <span class="chip chip-rp">Runpod</span>
+        <span class="chip">LLMOps</span>
+        <span class="chip">TPC-DS</span>
+        <span class="chip">Quantum</span>
+      </div>
+      <span class="url">litkhai.github.io</span>
+    </div>
+  </body>
+</html>
