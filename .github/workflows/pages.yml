@@ -25,6 +25,9 @@ jobs:
         uses: actions/checkout@v6
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Keep agent files out of the site
+        # AGENTS.md, CLAUDE.md and .claude/ are for coding agents, not visitors
+        run: rm -rf AGENTS.md CLAUDE.md .claude
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:
