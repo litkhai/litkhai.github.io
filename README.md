@@ -34,6 +34,16 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+## Deploy
+
+Vercel project `litkhai-dev` in the `litkhai` team. `vercel link` writes
+`.vercel/` and `.env.local`, and both are gitignored. Until the repository is
+connected to Vercel for Git deploys (#7), production is updated by hand:
+
+```bash
+npx vercel --scope litkhai deploy --prod
+```
+
 ## Checks
 
 From a `khai-harness` checkout next to this one:
