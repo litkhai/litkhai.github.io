@@ -36,9 +36,12 @@ Then open `http://localhost:8000`.
 
 ## Deploy
 
-Vercel project `litkhai-dev` in the `litkhai` team. `vercel link` writes
-`.vercel/` and `.env.local`, and both are gitignored. Until the repository is
-connected to Vercel for Git deploys (#7), production is updated by hand:
+Vercel project `litkhai-dev` in the `litkhai` team, connected to this
+repository: a push to `main` deploys production, and a pull request gets a
+preview deployment. `www.litkhai.dev` redirects to `litkhai.dev` with a 308.
+`vercel link` writes `.vercel/` and `.env.local`, and both are gitignored.
+
+Manual production deploy, if the Git integration is ever disconnected:
 
 ```bash
 npx vercel --scope litkhai deploy --prod
