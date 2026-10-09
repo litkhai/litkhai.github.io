@@ -1,4 +1,4 @@
-name: Deploy personal site
+name: Deploy litkhai.github.io redirect
 
 on:
   push:
@@ -25,13 +25,14 @@ jobs:
         uses: actions/checkout@v6
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Keep agent files out of the site
-        # AGENTS.md, CLAUDE.md and .claude/ are for coding agents, not visitors
-        run: rm -rf AGENTS.md CLAUDE.md .claude
-      - name: Upload site
+      # The site lives at https://litkhai.dev (Vercel). litkhai.github.io only
+      # publishes redirect/, which forwards every path there. A Pages custom
+      # domain is not used: it would also move the project sites under
+      # litkhai.github.io/<repo>/, which litkhai.dev does not serve.
+      - name: Upload redirect
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: redirect
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
