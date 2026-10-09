@@ -1,0 +1,8 @@
+# Agent and repository files are not part of the site
+AGENTS.md
+CLAUDE.md
+.claude
+README.md
+tools
+.github
+.nojekyll

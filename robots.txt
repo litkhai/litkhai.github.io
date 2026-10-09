@@ -1,4 +1,26 @@
+# Web-profile robots policy (khai-harness standards/frontend, common/web-exposure W1), adopted 2026-10-10.
+# Search and answer/citation bots: allowed. Training crawlers and training-use tokens: disallowed.
+
 User-agent: *
 Allow: /
 
-Sitemap: https://litkhai.github.io/sitemap.xml
+# --- training crawlers ---
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: omgili
+User-agent: ImagesiftBot
+Disallow: /
+
+# --- control tokens (opt out of training / grounding reuse) ---
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Disallow: /
+
+Sitemap: https://litkhai.dev/sitemap.xml

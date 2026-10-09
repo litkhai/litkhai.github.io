@@ -14,10 +14,10 @@
       property="og:description"
       content="Hands-on labs across the AI stack — ClickHouse analytics, Runpod GPU compute, and LLMOps — plus clickhouse.kr, the Korean-language ClickHouse hub."
     />
-    <meta property="og:url" content="https://litkhai.github.io/" />
+    <meta property="og:url" content="https://litkhai.dev/" />
     <meta property="og:site_name" content="Ken Lee" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://litkhai.github.io/og-image.png" />
+    <meta property="og:image" content="https://litkhai.dev/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
@@ -30,8 +30,9 @@
       name="twitter:description"
       content="Hands-on labs across the AI stack — ClickHouse analytics, Runpod GPU compute, and LLMOps — plus clickhouse.kr, the Korean-language ClickHouse hub."
     />
-    <meta name="twitter:image" content="https://litkhai.github.io/og-image.png" />
-    <link rel="canonical" href="https://litkhai.github.io/" />
+    <meta name="twitter:image" content="https://litkhai.dev/og-image.png" />
+    <meta name="author" content="Ken Lee" />
+    <link rel="canonical" href="https://litkhai.dev/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate icon" href="/favicon.ico" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -42,7 +43,8 @@
       href="/fonts/inter-latin.woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/palettes/paper-ink.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>Ken Lee — Solutions Architect, ClickHouse</title>
     <script type="application/ld+json">
       {
@@ -50,8 +52,8 @@
         "@type": "Person",
         "name": "Ken Lee",
         "alternateName": "Kee Hoon Lee",
-        "url": "https://litkhai.github.io/",
-        "image": "https://litkhai.github.io/og-image.png",
+        "url": "https://litkhai.dev/",
+        "image": "https://litkhai.dev/og-image.png",
         "jobTitle": "Solutions Architect",
         "worksFor": { "@type": "Organization", "name": "ClickHouse" },
         "address": {
@@ -256,10 +258,14 @@
         <div class="stack">
           <article class="card card-clickhouse">
             <h3>ClickHouse Hands-On Labs</h3>
-            <p>Feature labs, Cloud integrations, and benchmarks — published as clickhouse.kr.</p>
+            <p>
+              Per-release feature labs and benchmarks, with tracks for Cloud on AWS,
+              ClickStack, Langfuse, and Managed Postgres — written up on clickhouse.kr.
+            </p>
             <div class="card-links">
               <a href="https://clickhouse.kr">clickhouse.kr <span aria-hidden="true">→</span></a>
               <a href="https://github.com/litkhai/clickhouse-hols">Source</a>
+              <a href="https://github.com/litkhai?tab=repositories&amp;q=hols">All labs</a>
             </div>
           </article>
 
@@ -267,7 +273,7 @@
             <h3>Runpod Hands-On Labs</h3>
             <p>Serverless workers, GPU pods, and Terraform — every finding verified by running it.</p>
             <div class="card-links">
-              <a href="https://litkhai.github.io/runpod-hols">View labs <span aria-hidden="true">→</span></a>
+              <a href="https://litkhai.github.io/runpod-hols/">View labs <span aria-hidden="true">→</span></a>
               <a href="https://github.com/litkhai/runpod-hols">Source</a>
             </div>
           </article>
@@ -277,7 +283,7 @@
             <p>Self-hosted serving, gateway, chat UI, and observability — laptop to cluster.</p>
             <div class="card-links">
               <a href="https://litkhai.github.io/llmops-in-a-box/">Docs <span aria-hidden="true">→</span></a>
-              <a href="https://litkhai.github.io/lightweight-workshop-llmops-in-a-box/">Workshop</a>
+              <a href="https://litkhai.github.io/llmops-workshop/">Workshop</a>
               <a href="https://github.com/litkhai/llmops-in-a-box">Source</a>
             </div>
           </article>
@@ -295,10 +301,10 @@
             <h3>NY Citi Bike Workshop</h3>
             <p>A live bike-share feed across Postgres and ClickHouse — the query plan proves which engine answered.</p>
             <div class="card-links">
-              <a href="https://litkhai.github.io/lightweight-workshop-ny-citi-bike/">
+              <a href="https://litkhai.github.io/citi-bike-workshop/">
                 Workshop <span aria-hidden="true">→</span>
               </a>
-              <a href="https://github.com/litkhai/lightweight-workshop-ny-citi-bike">Source</a>
+              <a href="https://github.com/litkhai/citi-bike-workshop">Source</a>
             </div>
           </article>
 
@@ -328,7 +334,7 @@
 
     <footer>
       <p>© Ken Lee (Kee Hoon Lee)</p>
-      <p>Static, accessible, and hosted on GitHub Pages.</p>
+      <p>Static, accessible, and hosted on Vercel.</p>
     </footer>
   </body>
 </html>
