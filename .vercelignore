@@ -4,6 +4,7 @@ CLAUDE.md
 .claude
 README.md
 tools
+redirect
 .github
 .nojekyll
 .env*

@@ -3,9 +3,11 @@
 Source for `https://litkhai.dev`, served by Vercel. A single-page profile:
 intro, experience, sidebar credentials, selected work, and contact.
 
-`https://litkhai.github.io` is still published from the same files by the
-GitHub Pages workflow until it is turned into a redirect. Project sites under
-`litkhai.github.io/<repo>/` are separate repositories and are not affected.
+`https://litkhai.github.io` publishes only `redirect/`, which sends every path
+to `litkhai.dev` (canonical, meta refresh, and a script that keeps the path).
+GitHub Pages cannot send a server redirect, and a Pages custom domain would also
+move the project sites under `litkhai.github.io/<repo>/`, which live in their
+own repositories and stay where they are.
 
 ## Structure
 
@@ -24,7 +26,8 @@ GitHub Pages workflow until it is turned into a redirect. Project sites under
 - `vercel.json` — security headers (CSP trimmed to same-origin only) and font
   caching
 - `.vercelignore` — keeps agent and repository files out of the deployment
-- `.github/workflows/pages.yml` — GitHub Pages deployment (`litkhai.github.io`)
+- `redirect/` — what `litkhai.github.io` serves: a forward to `litkhai.dev`
+- `.github/workflows/pages.yml` — publishes `redirect/` to GitHub Pages
 
 ## Preview
 
