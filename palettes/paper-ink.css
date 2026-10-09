@@ -1,0 +1,22 @@
+/* Paper/ink palette with the ClickHouse yellow accent. The only file that holds
+   colour values; styles.css and tools/og-card.html use these variables. */
+
+:root {
+  --ink: #171717;
+  --paper: #f7f5ef;
+  --panel: #ffffff;
+  --muted: #686761;
+  --line: #d9d6cc;
+  --accent: #ffcc01;
+  --accent-dark: #8a6900;
+
+  /* Selected work band (dark) */
+  --band-text: #ffffff;
+  --band-muted: #8f8d86;
+  --band-body: #b9b7b0;
+  --band-fill: rgba(255, 255, 255, 0.04);
+  --band-edge: rgba(255, 255, 255, 0.12);
+  --tile-clickhouse: #ffcc01;
+  --tile-runpod: #bbb6fd;
+  --tile-plain: #ffffff;
+}

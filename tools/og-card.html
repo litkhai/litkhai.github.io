@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="../palettes/paper-ink.css" />
     <style>
       * { box-sizing: border-box; margin: 0; }
       html, body { width: 1200px; height: 630px; }
@@ -10,36 +11,36 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 72px 80px;
-        background: #f7f5ef;
-        color: #171717;
+        background: var(--paper);
+        color: var(--ink);
         font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif;
         font-synthesis: none;
       }
       .top { display: flex; align-items: center; gap: 18px; }
       .mark {
         width: 26px; height: 26px; border-radius: 50%;
-        background: #ffcc01; box-shadow: 0 0 0 7px #171717;
+        background: var(--accent); box-shadow: 0 0 0 7px var(--ink);
       }
       .eyebrow {
         font-size: 25px; font-weight: 800;
-        letter-spacing: 0.16em; color: #8a6900;
+        letter-spacing: 0.16em; color: var(--accent-dark);
       }
       h1 {
         font-size: 148px; font-weight: 800;
         letter-spacing: -0.055em; line-height: 0.92;
       }
       .role { margin-top: 22px; font-size: 41px; font-weight: 650; letter-spacing: -0.02em; }
-      .lede { margin-top: 16px; font-size: 31px; color: #686761; letter-spacing: -0.01em; }
+      .lede { margin-top: 16px; font-size: 31px; color: var(--muted); letter-spacing: -0.01em; }
       .bottom { display: flex; align-items: flex-end; justify-content: space-between; }
       .chips { display: flex; gap: 12px; }
       .chip {
         padding: 11px 20px; font-size: 24px; font-weight: 750;
-        border: 2px solid #171717; border-radius: 999px;
+        border: 2px solid var(--ink); border-radius: 999px;
       }
-      .chip-ch { background: #ffcc01; }
-      .chip-rp { background: #bbb6fd; }
+      .chip-ch { background: var(--accent); }
+      .chip-rp { background: var(--tile-runpod); }
       .url { font-size: 27px; font-weight: 800; letter-spacing: -0.01em; }
-      .rule { height: 6px; background: #171717; margin: 34px 0; }
+      .rule { height: 6px; background: var(--ink); margin: 34px 0; }
     </style>
   </head>
   <body>
@@ -61,7 +62,7 @@
         <span class="chip">TPC-DS</span>
         <span class="chip">Quantum</span>
       </div>
-      <span class="url">litkhai.github.io</span>
+      <span class="url">litkhai.dev</span>
     </div>
   </body>
 </html>

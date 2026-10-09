@@ -10,13 +10,7 @@
 }
 
 :root {
-  --ink: #171717;
-  --paper: #f7f5ef;
-  --panel: #ffffff;
-  --muted: #686761;
-  --line: #d9d6cc;
-  --accent: #ffcc01;
-  --accent-dark: #8a6900;
+  /* colours come from palettes/paper-ink.css */
   --radius: 0.6rem;
   color-scheme: light;
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -59,7 +53,7 @@ p {
 .skip-link {
   position: fixed;
   top: 0.5rem;
-  left: 0.5rem;
+  inset-inline-start: 0.5rem;
   z-index: 20;
   padding: 0.55rem 0.8rem;
   color: var(--ink);
@@ -191,7 +185,7 @@ h1 {
 .button {
   display: inline-flex;
   align-items: center;
-  min-height: 2.5rem;
+  min-height: 2.75rem;
   padding: 0.5rem 0.9rem;
   font-size: 0.82rem;
   font-weight: 750;
@@ -308,14 +302,14 @@ h1 {
 .band-dark {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: var(--band-text);
   background: var(--ink);
   border: 0;
   border-radius: var(--radius);
 }
 
 .band-dark .section-title {
-  color: #8f8d86;
+  color: var(--band-muted);
 }
 
 .stack {
@@ -329,23 +323,23 @@ h1 {
   display: flex;
   flex-direction: column;
   padding: 1.1rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--band-fill);
+  border: 1px solid var(--band-edge);
   border-top: 0.2rem solid var(--card-accent);
   border-radius: 0.4rem;
 }
 
 .card-clickhouse {
-  --card-accent: #ffcc01;
+  --card-accent: var(--tile-clickhouse);
 }
 
 .card-runpod {
-  --card-accent: #bbb6fd;
+  --card-accent: var(--tile-runpod);
 }
 
 .card-llmops,
 .card-plain {
-  --card-accent: #ffffff;
+  --card-accent: var(--tile-plain);
 }
 
 .card h3 {
@@ -357,7 +351,7 @@ h1 {
 
 .card p {
   margin-bottom: 0;
-  color: #b9b7b0;
+  color: var(--band-body);
   font-size: 0.85rem;
 }
 
@@ -387,7 +381,7 @@ h1 {
   margin-bottom: 2.5rem;
   background: var(--panel);
   border: 1px solid var(--line);
-  border-left: 0.35rem solid var(--accent);
+  border-inline-start: 0.35rem solid var(--accent);
   border-radius: var(--radius);
 }
 
@@ -422,12 +416,42 @@ footer p {
   margin: 0;
 }
 
+/* Touch targets: 44px tall below 1024px (web profile 01 §6). Links inside
+   running text keep their line height. */
+@media (max-width: 64rem) {
+  .brand,
+  nav a,
+  .card-links a,
+  .contact-links a {
+    display: inline-flex;
+    gap: 0.3em; /* flex drops the space before the arrow */
+    align-items: center;
+    min-height: 2.75rem;
+  }
+
+  .facts a {
+    display: inline-block;
+    padding-block: 0.15rem;
+  }
+
+  nav {
+    column-gap: 1.25rem;
+    row-gap: 0;
+  }
+
+  .card-links {
+    column-gap: 1.25rem;
+    row-gap: 0;
+    padding-top: 0.4rem;
+  }
+}
+
 @media (max-width: 48rem) {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
-    gap: 0.6rem;
-    padding-block: 1rem;
+    gap: 0;
+    padding-block: 0.5rem;
   }
 
   .columns {

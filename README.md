@@ -1,19 +1,30 @@
 # Ken Lee — Personal Site
 
-Source for `https://litkhai.github.io`. A single-page profile: intro, experience,
-sidebar credentials, selected work, and contact.
+Source for `https://litkhai.dev`, served by Vercel. A single-page profile:
+intro, experience, sidebar credentials, selected work, and contact.
+
+`https://litkhai.github.io` is still published from the same files by the
+GitHub Pages workflow until it is turned into a redirect. Project sites under
+`litkhai.github.io/<repo>/` are separate repositories and are not affected.
 
 ## Structure
 
 - `index.html` — the entire page, including Person JSON-LD
-- `styles.css` — visual system (light, paper/ink, yellow accent)
+- `palettes/paper-ink.css` — the only file with colour values (paper/ink,
+  yellow accent); everything else uses its variables
+- `styles.css` — layout and type
 - `404.html` — not-found page
 - `fonts/inter-latin.woff2` — self-hosted Inter, latin subset, weights 400–800
   (SIL Open Font License, see `fonts/OFL.txt`)
 - `tools/og-card.html` — source the social card is rendered from
 - `og-image.png` — 1200×630 social preview card
 - `favicon.svg` · `favicon.ico` · `apple-touch-icon.png` — icons
-- `.github/workflows/pages.yml` — GitHub Pages deployment
+- `robots.txt` — web-profile policy: search and answer bots allowed, training
+  crawlers disallowed
+- `vercel.json` — security headers (CSP trimmed to same-origin only) and font
+  caching
+- `.vercelignore` — keeps agent and repository files out of the deployment
+- `.github/workflows/pages.yml` — GitHub Pages deployment (`litkhai.github.io`)
 
 ## Preview
 
@@ -22,6 +33,15 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Checks
+
+From a `khai-harness` checkout next to this one:
+
+```bash
+bash ../khai-harness/standards/frontend/profiles/web/harness/verify/lint-web.sh .
+bash ../khai-harness/standards/frontend/profiles/web/harness/verify/exposure-check-web.sh https://litkhai.dev
+```
 
 ## Regenerating the images
 
