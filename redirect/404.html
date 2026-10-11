@@ -9,10 +9,11 @@
     <script>
       // Keep the path, query and fragment; the meta refresh above is the no-JS fallback.
       // /quantum-notes/ was the Pages path of litkhai/notes-on-quantum before the
-      // rename; its known pages have stubs in quantum-notes/, anything else lands here.
+      // rename; the site is now https://quantum.litkhai.dev. Its known pages have
+      // stubs in quantum-notes/, anything else lands here.
       var p = location.pathname, q = "/quantum-notes";
       if (p === q || p.indexOf(q + "/") === 0) {
-        location.replace("https://litkhai.github.io/notes-on-quantum" + (p.slice(q.length) || "/") + location.search + location.hash);
+        location.replace("https://quantum.litkhai.dev" + (p.slice(q.length) || "/") + location.search + location.hash);
       } else {
         location.replace("https://litkhai.dev" + p + location.search + location.hash);
       }
